@@ -209,6 +209,10 @@ static void config_server_evt_cb(const config_server_evt_t * p_evt)
     {
         node_reset();
     }
+    else if(p_evt->type == CONFIG_SERVER_EVT_MODEL_PUBLICATION_SET)
+    {
+        __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Publication set\n");
+    }
 }
 
 static void send_app_state(bool is_state_on)
@@ -472,6 +476,22 @@ static void app_mesh_core_event_cb(const nrf_mesh_evt_t * p_evt)
             ERROR_CHECK(app_timer_stop(m_state_on_timer));
             break;
         }
+
+        case NRF_MESH_EVT_PROXY_STOPPED:
+            __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "NRF_MESH_EVT_PROXY_STOPPED\n");
+            break;
+
+        case NRF_MESH_EVT_DISABLED:
+            __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "NRF_MESH_EVT_DISABLED\n");
+            break;
+
+        case NRF_MESH_EVT_RX_FAILED:
+            __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "NRF_MESH_EVT_RX_FAILED\n");
+            break;
+
+        case NRF_MESH_EVT_SAR_FAILED:
+            __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "NRF_MESH_EVT_SAR_FAILED\n");
+            break;
 
         default:
             break;
