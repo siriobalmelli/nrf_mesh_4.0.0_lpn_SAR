@@ -1,10 +1,13 @@
-# nRF5 SDK for mesh 4.0.0 : LPN friendship SAR Bug
+# nRF5 SDK for mesh 4.0.0 : LPN friendship NRF_MESH_EVT_SAR_FAILED
 
-This is a repo to allow for easy reproduction of a bug with LPN friendship.
+This is a repo to allow for easy reproduction of a bug with LPN friendship,
+where the mesh stack throws `NRF_MESH_EVT_SAR_FAILED` when replying to
+a publish-set message.
 
 Reproduction sequence is below.
 
-The original README text from Nordic was moved to [README_original.md](./README_original.md).
+NOTE that the original README text from Nordic was moved to
+[README_original.md](./README_original.md).
 
 ## Basic Setup
 
@@ -112,3 +115,9 @@ Log output:
     stack throws `NRF_MESH_EVT_SAR_FAILED` on reply.
 
     The app never receives a reply and eventually times out.
+
+## NOTES
+
+1. This behaves the same when `#define CORE_TX_QUEUE_BUFFER_SIZE_RELAY 512`
+is added to `examples/experimental_lpn/include/nrf_mesh_config_app.h`
+as per [this issue](https://devzone.nordicsemi.com/f/nordic-q-a/25574/unexpected-event-24/100824#100824).

@@ -38,6 +38,8 @@
 #ifndef NRF_MESH_CONFIG_APP_H__
 #define NRF_MESH_CONFIG_APP_H__
 
+#define CORE_TX_QUEUE_BUFFER_SIZE_RELAY 512
+
 /**
  * @defgroup NRF_MESH_CONFIG_APP nRF Mesh application configuration
  *
