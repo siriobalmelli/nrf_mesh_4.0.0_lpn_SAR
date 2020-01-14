@@ -4,6 +4,8 @@ This is a repo to allow for easy reproduction of a bug with LPN friendship,
 where the mesh stack throws `NRF_MESH_EVT_SAR_FAILED` when replying to
 a publish-set message.
 
+The associated Nordic DevZone Ticket is [here](https://devzone.nordicsemi.com/f/nordic-q-a/56546/mesh-stack-throws-nrf_mesh_evt_sar_failed-when-lpn-replies-to-a-publication-set-message-via-friend-node).
+
 Reproduction sequence is below.
 
 NOTE that the original README text from Nordic was moved to
@@ -11,7 +13,8 @@ NOTE that the original README text from Nordic was moved to
 
 ## Basic Setup
 
-You will need two nRF52-DK boards:
+You will need two [nRF52-DK](https://www.nordicsemi.com/Software-and-Tools/Development-Kits/nRF52-DK)
+`PCA10040` boards:
 
 - LPN node: Generic onoff Client, LPN
 - Light Switch Server: Generic onoff Server, Friend Node
