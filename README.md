@@ -35,11 +35,11 @@ You will need two [nRF52-DK](https://www.nordicsemi.com/Software-and-Tools/Devel
 
 1. Clone this repo and set up the build
 
-        git clone https://github.com/siriobalmelli/nrf_mesh_4.0.0_lpn_bug.git
-        cd nrf_mesh_4.0.0_lpn_bug
+        git clone https://github.com/siriobalmelli/nrf_mesh_4.0.0_lpn_SAR.git
+        cd nrf_mesh_4.0.0_lpn_SAR
         mkdir build && cd build
         cmake -GNinja ..
-        ninja nRF5_SDK  # will install nRF52 SDK in the directory above nrf_mesh_4.0.0_lpn_bug
+        ninja nRF5_SDK  # will install nRF52 SDK in the directory above nrf_mesh_4.0.0_lpn_SAR
         cmake -GNinja ..
 
 1. Set up the Light Switch Server
