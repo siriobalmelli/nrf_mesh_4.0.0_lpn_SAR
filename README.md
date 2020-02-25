@@ -84,7 +84,7 @@ Log output:
         <t:     979201>, main.c,  455, Friendship established with: 0x000D
         <t:     989283>, main.c,  437, Friend poll procedure complete
 
-1. Use the app to subscribe LPN `Element 2` -> `Generic OnOff Client` to `GroupA`.
+1. Use the app to publish LPN `Element 2` -> `Generic OnOff Client` to `GroupA`.
 Log output:
 
         <t:    6294774>, main.c,  437, Friend poll procedure complete
